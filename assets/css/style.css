@@ -1,0 +1,21 @@
+
+  h1 {
+    color: white;
+  }
+
+  body  {
+    background-image: url("assets/images/JPGates.jpg");
+  }
+  #show-number {
+    color: white;
+  }
+  #stats {
+    color: white;
+  }
+  .question {
+    color: white;
+  }
+
+  form {
+  color: white;
+  }
