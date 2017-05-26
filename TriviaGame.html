@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Jurassic Park Trivia Game!</title>
+  </head>
+  <style>
+
+    h1 {
+      color: white;
+    }
+
+    body  {
+      background-image: url("assets/images/JPGates.jpg");
+    }
+    #show-number {
+      color: white;
+    }
+    #stats {
+      color: white;
+    }
+    .question {
+      color: white;
+    }
+
+    form {
+    color: white;
+    }
+  </style>
+  <body>
+    <h1>Trivia Game!</h1>
+
+  <div id="show-number"></div>
+
+  <div id="stats"></div>
+
+    <br>
+
+      <button id="start-button">Start</button>
+
+    <br>
+
+    <p class="question"> 1. What is the name of the fictional island Jurassic Park is situated on? </p>
+
+    <form>
+      <input type="radio" name="island-type" value="san lorenzo"> San Lorenzo<br>
+      <input type="radio" name="island-type" value="isla nublar"> Isla Nublar<br>
+      <input type="radio" name="island-type" value="koholint island"> Koholint Island<br>
+      <input type="radio" name="island-type" value="isle of naboombu"> Isle of Naboombu<br>
+    </form>
+
+    <p class="question"> 2. Why does Dennis Nedry shut down the park's security systems? </p>
+
+    <form>
+      <input type="radio" name="island-type" value="by mistake"> By mistake<br>
+      <input type="radio" name="island-type" value="in protest at unfair working conditions"> In protest at unfair working conditions<br>
+      <input type="radio" name="island-type" value="to steal some dinosaurs"> To steal some dinosaurs<br>
+      <input type="radio" name="island-type" value="for the lulz"> For the lulz<br>
+    </form>
+
+    <p class="question"> 3. What is Jeff Goldblum's character's job? </p>
+    <form>
+      <input type="radio" name="island-type" value="paleontologist"> Paleontologist<br>
+      <input type="radio" name="island-type" value="sociologist"> Sociologist<br>
+      <input type="radio" name="island-type" value="mathematician"> Mathematician<br>
+      <input type="radio" name="island-type" value="journalist"> Journalist<br>
+    </form>
+
+    <p class="question"> 4. Jurassic Park broke box office records - but which was the first film to break Jurassic Park's record?</p>
+    <form>
+      <input type="radio" name="island-type" value="the lion king"> The Lion King<br>
+      <input type="radio" name="island-type" value="the matrix"> The Matrix<br>
+      <input type="radio" name="island-type" value="the phantom menace"> The Phantom Menace<br>
+      <input type="radio" name="island-type" value="titanic"> Titanic<br>
+    </form>
+
+    <p class="question"> 5. For how many minutes of the film are dinosaurs on screen? </p>
+    <form>
+      <input type="radio" name="island-type" value="9 minutes"> 9 minutes<br>
+      <input type="radio" name="island-type" value="15 minutes"> 15 minutes<br>
+      <input type="radio" name="island-type" value="32 minutes"> 32 minutes<br>
+      <input type="radio" name="island-type" value="43 minutes"> 43 minutes<br>
+    </form>
+
+    <p class="question"> 6. What was Jurassic Park's tagline? </p>
+    <form>
+      <input type="radio" name="island-type" value="arrrrgh! dinoraus!"> ARRRRGH! DINOSAURS!<br>
+      <input type="radio" name="island-type" value="have we got a vacation or you"> Have we got a vacation for you!<br>
+      <input type="radio" name="island-type" value="buy the ticket, take the ride"> Buy the ticket, take the ride<br>
+      <input type="radio" name="island-type" value="an adventure 65 million years in the making"> An adventure 65 million years in the making<br>
+    </form>
+
+    <p class="question"> 7. Jurassic Park founder John Hammond (Richard Attenborough) tells his guests that his first ever attraction was… </p>
+
+    <form>
+      <input type="radio" name="island-type" value="a dog show"> A dog show<br>
+      <input type="radio" name="island-type" value="a flea circus<"> A flea circus<br>
+      <input type="radio" name="island-type" value="a wild west theme park"> A Wild West theme park<br>
+      <input type="radio" name="island-type" value="an island stocked with enormous murderous lizards"> An island stocked with enormous murderous lizards<br>
+    </form>
+
+    <p class="question"> 8. The Tyrannousauras sound effects were made up various other animals' noises, including a...</p>
+
+    <form>
+      <input type="radio" name="island-type" value="whale"> Whale<br>
+      <input type="radio" name="island-type" value="penguin"> Penguin<br>
+      <input type="radio" name="island-type" value="chinchilla"> Chinchilla<br>
+      <input type="radio" name="island-type" value="chicken"> Chicken<br>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    //setTimeout(timeUp, );
+
+
+
+
+      //<!--$("#start").on("click", run);
+      //$(document).ready(function(){
+        //$("#hide").click(function(){
+          //(div).start();
+          //$("button").hide("slow", function());{}
+          //$("#start").hide("click", run);
+
+      //var number = 20;
+
+      var intervalId;
+
+    //setTimeout(timeUp, 1000 * 30);
+    $("#start-button").on("click", run);
+
+    function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+      number--;
+
+      $("#show-number").html("<h2>" + number + "</h2>");
+
+      //  Once number hits zero...
+      if (number === 0) {
+
+        //  ...run the stop function.
+         stop();
+         //  Alert the user that time is up.
+         //alert("Time Up!");
+         $("#stats").html("<h2>" + "STATS: " + "</h2>");
+     }
+    }
+
+    function stop() {
+      //setTimeout(timeUp, 1000 * 30);
+      clearInterval(intervalId);
+    }
+     //  Execute the run function.
+     run();
+
+
+  </body>
+</html>
